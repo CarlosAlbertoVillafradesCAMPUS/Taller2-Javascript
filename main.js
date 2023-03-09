@@ -1,19 +1,20 @@
-/* EJERCICOIO 1--Construir el algoritmo para un programa que ingrese tres
-notas de un alumno, si el promedio es menor o igual a 3.9
-mostrar un mensaje "Estudie“, de lo contrario un mensaje que
-diga "becado" */
+/* EJERCICOIO 2--Dado un número indicar si es par o impar y si es mayor de 10. */
 do{
-let nota1 = Number(prompt("Ingrese la primera nota (1.0 - 5.0)"));
-let nota2 = Number(prompt("Ingrese la segunda nota (1.0 - 5.0)"));
-let nota3 = Number(prompt("Ingrese la tercera nota (1.0 - 5.0)"));
+let numero = Number(prompt("Ingrese un numero entero"));
 
-let promedio = (nota1 + nota2 + nota3)/3;
-
-if(promedio <= 3.9){
-    alert(`Promedio: ${promedio.toFixed(2)}\nPailas mi ñero, vaya y estudie mas bien`);
+if(numero % 2 === 0){
+    if(numero > 10){
+        alert(`El numero ${numero} es PAR y es MAYOR que 10`);
+    }else{
+        alert(`El numero ${numero} es PAR y es MENOR que 10`)
+    }  
 }else{
-    alert(`Promedio: ${promedio.toFixed(2)}\nFirme parcero acabas de quedar becado en CAMPUSLAND`)
+    if(numero > 10){
+        alert(`El numero ${numero} es IMPAR y es MAYOR que 10`);
+    }else{
+        alert(`El numero ${numero} es IMPAR y es MENOR que 10`)
+    }  
 }
-}while(confirm("¿Desea calcular otro promedio?"))
+}while(confirm("¿Desea ingresar otro numero?"))
 
 
