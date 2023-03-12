@@ -1,32 +1,19 @@
-/* EJERCICOIO 4--. Construir el algoritmo que solicite el nombre y edad de 3
-personas y determine el nombre de la persona con mayor edad. */
+/* EJERCICOIO 5--.Construir el algoritmo que lea por teclado dos números,
+si el primero es mayor al segundo informar su suma y
+diferencia, en caso contrario, informar el producto y la
+división del primero respecto al segundo. */
 do{
-    let persons = {
-        name:[],
-        age: []
-    }
+   let num1 = Number(prompt(`Digite el primer numero`));
+   let num2 = Number(prompt(`Digite el segundo numero`));
 
-    let cant_persons = Number(prompt("Cuantas va personas va a ingresar"));
-    save_person(cant_persons);
-    alert(`La persona mayor es ${result()}`)
+   if(num1 === num2){
+    alert(`Error ${num1} y ${num2} son numero iguales`)
+   }else{
+    (num1 > num2) 
+   ? alert(`el primer numero(${num1}) es mayor al segundo(${num2}), entonces su suma es ${num1 + num2}, con una diferencia de ${num1-num2}`)
+   : alert(`el segundo numero(${num2}) es mayor al primero(${num1}), entonces su producto es ${num2 * num1}, y la divicion de ${num2}/${num1} es de ${num2/num1}`)
 
-    function save_person(cantidad) {
-        for (let i = 1; i <= cantidad; i++) {
-            let name_person = prompt(`Digite el Nombre de la persona ${i}`)
-            let age_person = Number(prompt(`Digite la Edad de la persona ${i}`))
-            
-            persons.name.push(name_person);
-            persons.age.push(age_person)
-        }
-    }
-
-    function result(){
-        let age_max = Math.max(...persons.age);
-        let position = persons.age.indexOf(age_max)
-        
-        return `${persons.name[position]} con una edad de ${persons.age[position]} años`
-    }
-
-}while(confirm("¿Desea volver a ingresar mas personas?"))
+   }
+}while(confirm("¿Desea ingresar otros numeros?"))
 
 
