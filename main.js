@@ -1,20 +1,11 @@
-/* EJERCICOIO 2--Dado un número indicar si es par o impar y si es mayor de 10. */
+/* EJERCICOIO 3--. Construir el algoritmo para determinar el voltaje de un
+circuito a partir de la resistencia y la intensidad de corriente. */
 do{
-let numero = Number(prompt("Ingrese un numero entero"));
+let resistencia = Number(prompt("Ingrese la resistencia (Ohmios)"));
+let intencidad = Number(prompt("Ingrese la intencidad (Amperios)"));
+let voltaje = resistencia * intencidad
 
-if(numero % 2 === 0){
-    if(numero > 10){
-        alert(`El numero ${numero} es PAR y es MAYOR que 10`);
-    }else{
-        alert(`El numero ${numero} es PAR y es MENOR que 10`)
-    }  
-}else{
-    if(numero > 10){
-        alert(`El numero ${numero} es IMPAR y es MAYOR que 10`);
-    }else{
-        alert(`El numero ${numero} es IMPAR y es MENOR que 10`)
-    }  
-}
+alert(`El voltaje del circuito con una resistencia de ${resistencia}(Ω) y una intencidad de ${intencidad}(A) es: ${voltaje}(V)`)
 }while(confirm("¿Desea ingresar otro numero?"))
 
 
