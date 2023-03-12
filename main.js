@@ -1,10 +1,21 @@
-/* EJERCICOIO 6--.Programa que pida el ingreso del nombre y precio de un artículo y la
-cantidad que lleva el cliente. Mostrar lo que debe pagar el comprador
-en su factura. */
+/* EJERCICOIO 8--.Programa que Ingrese por teclado:
+a. el valor del lado de un cuadrado para mostrar por pantalla el
+perímetro del mismo
+b. la base y la altura de un rectángulo para mostrar el área del
+mismo */
 do {
-  let name_article = prompt(`Digite el nombre del articulo`);
-  let price_article = Number(prompt(`Digite el precio del articulo (${name_article})`));
-  let cant_article = Number(prompt(`Digite la cantidad de ${name_article} que va a llevar`))
+    let option = Number(prompt(`Digite la opcion que deseas realizar\n1.Perimetro de un cuadrado\n2.Area del rectangulo`))
 
-  alert(`Nombre del articulo: ${name_article}\nPrecio Articulo: ${price_article}\nCantidad a Llevar: ${cant_article}\n\nTotal a Pagar: ${price_article*cant_article}`)
-} while (confirm("¿Desea ingresar otro Articulo?"));
+    if(option > 0 && option <= 2) {
+        if(option === 1){
+            let side_square = Number(prompt(`Digite un lado del cuadrado (cm)`))
+            alert(`El perimetro del cuadrado es ${side_square * 4}cm`)
+        } else{
+            let base_rectangulo = Number(prompt(`Digite la base del rectangulo (cm)`));
+            let heigth_rectangulo = Number(prompt(`Digite la altura del rectangulo (cm)`))
+            alert(`El area del rectangulo es ${base_rectangulo * heigth_rectangulo}cm`)
+        }
+    }else{
+        alert(`Error opcion incorrecta`)
+    }
+ } while (confirm("¿Desea ingresar otra opcion?"));
